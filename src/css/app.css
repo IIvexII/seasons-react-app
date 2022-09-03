@@ -80,3 +80,35 @@
 /***********************************************
                 Season End
 ***********************************************/
+/***********************************************
+                  Error
+***********************************************/
+.display-error {
+  display: flex;
+  flex-direction: column;  
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(250, 181, 181);
+  color: rgb(133, 63, 63);
+}
+.display-error i {
+  animation-name: rotate-icon;
+    animation-duration: 200ms;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+.display-error h1 {
+  font-size: 5svw;
+}
+@keyframes rotate-icon {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/***********************************************
+                Error End
+***********************************************/

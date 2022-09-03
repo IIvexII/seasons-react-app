@@ -1,7 +1,10 @@
 import React from 'react';
 import ReacDOM from 'react-dom/client';
+
 import SeasonDisplay from './components/SeasonDisplay';
 import Spinner from './components/Spinner';
+import Error from './components/Error';
+
 import './css/app.css';
 
 class App extends React.Component {
@@ -19,7 +22,7 @@ class App extends React.Component {
       return <SeasonDisplay lat={this.state.lat} />;
     } else if (!this.state.lat && this.state.errorMsg) {
       // Show Error
-      return <h3>Error: {this.state.errorMsg}</h3>;
+      return <Error />;
     } else {
       // Show Loading
       return <Spinner text='Please allow location request' />;
