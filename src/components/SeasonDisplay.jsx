@@ -31,14 +31,6 @@ export default class SeasonDisplay extends React.Component {
     }
   }
 
-  // componentDidMount() {
-  //   setInterval(() => {
-  //     this.setState({
-
-  //     })
-  //   },500);
-  // }
-
   render() {
     return (
       <div className={`season-display ${this.state.season.name.toLowerCase()}`}>

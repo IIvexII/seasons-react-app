@@ -11,10 +11,13 @@ class App extends React.Component {
   state = { lat: null, errorMsg: '' };
 
   componentDidMount() {
-    window.navigator.geolocation.getCurrentPosition(
-      (position) => this.setState({ lat: position.coords.latitude }),
-      (error) => this.setState({ errorMsg: error.message }),
-    );
+    setInterval(() => {
+      window.navigator.geolocation.getCurrentPosition(
+        (position) =>
+          this.setState({ lat: position.coords.latitude, errorMsg: null }),
+        (error) => this.setState({ lat: null, errorMsg: error.message }),
+      );
+    }, 1000);
   }
   render() {
     if (this.state.lat && !this.state.errorMsg) {
