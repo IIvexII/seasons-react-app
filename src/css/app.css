@@ -1,0 +1,82 @@
+/***********************************************
+                    Loader 
+***********************************************/
+.spinner {
+  height: 100vh;
+}
+.loading-color {
+  background-color: aqua!important;
+}
+/***********************************************
+                  Loader End
+***********************************************/
+
+/***********************************************
+                Season Display
+***********************************************/
+.season-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.icon-left {
+  position: absolute;
+  top: 20px;
+  left: 20px
+}
+.icon-right {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+/* Season Icon */
+.season-display.autumn  i{
+  color: rgb(196, 157, 84);
+}
+.season-display.winter i{
+  color: blue;
+}
+.season-display.spring i{
+  color: rgb(100, 155, 75);
+}
+.season-display.summer i{
+  color: rgb(153, 76, 56);
+}
+
+/* Season H1 */
+.season-display.winter h1{
+  color: rgb(95, 95, 150);
+}
+.season-display.autumn  h1{
+  color: rgb(121, 100, 60);
+}
+.season-display.spring  h1{
+  color: rgb(47, 99, 49);
+}
+.season-display.summer  h1{
+  color: rgb(119, 46, 41);
+}
+
+/* Season BG */
+.winter {
+  background-color: aliceblue
+}
+
+.autumn {
+  background-color: rgb(252, 252, 178);
+}
+
+.spring {
+  background-color: rgb(207, 243, 152);
+}
+
+.summer {
+  background-color: rgb(252, 159, 136);
+}
+
+/***********************************************
+                Season End
+***********************************************/

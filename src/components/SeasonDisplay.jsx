@@ -1,27 +1,7 @@
 import React from 'react';
-
-const Seasons = {
-  Spring: {
-    name: 'Spring',
-    phrase: 'Hurry let go to park and see the beauty.',
-  },
-  Summer: {
-    name: 'Summer',
-    phrase: "Let's hit the pool.",
-  },
-  Autumn: {
-    name: 'Autumn',
-    phrase: 'Leaves are falling but new will born.',
-  },
-  Winter: {
-    name: 'Winter',
-    phrase: "Burrr! It' very cold outside.",
-  },
-};
+import Seasons from '../enums/Seasons';
 
 const getSeason = (lat, month) => {
-  month += 1; // Start month 1 not from 0
-
   // Northern Hemisphere
   if (lat > 0) {
     // March to May -> Spring
@@ -31,7 +11,7 @@ const getSeason = (lat, month) => {
     // September to November -> Autumn
     else if (month >= 9 && month <= 11) return Seasons.Autumn;
     // December to February -> Winter
-    else if (month === 12 || month === 1) return Seasons.Winter;
+    else if (month === 12 || month <= 2) return Seasons.Winter;
   }
   // Southern Hemisphere
   else if (lat < 0) {
@@ -47,12 +27,13 @@ const getSeason = (lat, month) => {
 };
 
 export default function SeasonDisplay(props) {
-  const season = getSeason(props.lat, new Date().getMonth());
+  const season = getSeason(props.lat, new Date().getMonth() + 1);
 
   return (
-    <div>
-      <h1>{season.name}</h1>
+    <div className={`season-display ${season.name.toLowerCase()}`}>
+      <i className={`icon-left massive ${season.icon} icon`} />
       <h1>{season.phrase}</h1>
+      <i className={`icon-right massive ${season.icon} icon`} />
     </div>
   );
 }

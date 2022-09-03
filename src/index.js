@@ -1,6 +1,8 @@
 import React from 'react';
 import ReacDOM from 'react-dom/client';
 import SeasonDisplay from './components/SeasonDisplay';
+import Spinner from './components/Spinner';
+import './css/app.css';
 
 class App extends React.Component {
   state = { lat: null, errorMsg: '' };
@@ -20,7 +22,7 @@ class App extends React.Component {
       return <h3>Error: {this.state.errorMsg}</h3>;
     } else {
       // Show Loading
-      return <h3>Loading...</h3>;
+      return <Spinner text='Waiting for you to allow...' />;
     }
   }
 }
