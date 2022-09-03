@@ -22,7 +22,7 @@ class App extends React.Component {
       return <h3>Error: {this.state.errorMsg}</h3>;
     } else {
       // Show Loading
-      return <Spinner text='Waiting for you to allow...' />;
+      return <Spinner text='Please allow location request' />;
     }
   }
 }
