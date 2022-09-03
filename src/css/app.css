@@ -99,7 +99,7 @@
     animation-timing-function: linear;
 }
 .display-error h1 {
-  font-size: 5svw;
+  font-size: 5vw;
 }
 @keyframes rotate-icon {
   from {
